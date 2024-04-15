@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Heading, FormControl, FormLabel, Input, Button, Stack, Image, Text, Link } from "@chakra-ui/react";
 
 const Index = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      if (response.ok) {
+        console.log("Login successful");
+      } else {
+        console.error("Login failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
   return (
     <Box display="flex" alignItems="center" justifyContent="center" h="100vh" bg="gray.50">
       <Box p={8} maxWidth="500px" borderWidth={1} borderRadius={8} boxShadow="lg" bg="white">
@@ -10,15 +32,15 @@ const Index = () => {
           <Heading>청소매니저 로그인</Heading>
         </Box>
         <Box my={4} textAlign="left">
-          <form>
+          <form onSubmit={handleSubmit}>
             <Stack spacing={6}>
               <FormControl isRequired>
                 <FormLabel>아이디</FormLabel>
-                <Input type="text" placeholder="아이디를 입력하세요" />
+                <Input type="text" placeholder="아이디를 입력하세요" value={username} onChange={(e) => setUsername(e.target.value)} />
               </FormControl>
               <FormControl isRequired>
                 <FormLabel>비밀번호</FormLabel>
-                <Input type="password" placeholder="비밀번호를 입력하세요" />
+                <Input type="password" placeholder="비밀번호를 입력하세요" value={password} onChange={(e) => setPassword(e.target.value)} />
               </FormControl>
               <Button colorScheme="blue" type="submit" width="full">
                 로그인

@@ -47,7 +47,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await fetch("/api/cleaners/signup", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/cleaners/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,6 +70,17 @@ const SignUp = () => {
           profileImage,
         }),
       });
+      if (response.ok) {
+        toast({
+          title: "회원가입이 완료되었습니다",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        navigate("/");
+      } else {
+        throw new Error("회원가입에 실패했습니다");
+      }
     } catch (error) {
       console.error("Error signing up:", error);
       toast({
