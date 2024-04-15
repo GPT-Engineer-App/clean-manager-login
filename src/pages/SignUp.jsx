@@ -150,7 +150,7 @@ const SignUp = () => {
   };
 
   return (
-    <Box maxWidth="md" mx="auto" mt={8}>
+    <Box maxWidth="md" mx="auto" mt={8} px={4}>
       <Heading as="h1" size="xl" textAlign="center" mb={8}>
         청소매니저 회원가입
       </Heading>
