@@ -13,8 +13,8 @@ const Index = () => {
           <form>
             <Stack spacing={6}>
               <FormControl isRequired>
-                <FormLabel>전화번호</FormLabel>
-                <Input type="tel" placeholder="전화번호를 입력하세요" />
+                <FormLabel>아이디</FormLabel>
+                <Input type="text" placeholder="아이디를 입력하세요" />
               </FormControl>
               <FormControl isRequired>
                 <FormLabel>비밀번호</FormLabel>
@@ -29,7 +29,7 @@ const Index = () => {
         <Box mt={8} textAlign="center">
           <Text fontSize="sm">
             계정이 없으신가요?{" "}
-            <Link color="blue.500" href="/signup">
+            <Link color="blue.500" href="#">
               회원가입
             </Link>
           </Text>
