@@ -19,7 +19,7 @@ function App() {
         <Route path="/submit-quote" element={<SubmitQuote />} />
         <Route path="/my-schedule" element={<MySchedule />} />
         <Route path="/quote-management" element={<QuoteManagement />} />
-        <Route path="/reservation-management" element={<ReservationManagement />} />
+
         <Route path="/chat" element={<Chat />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>

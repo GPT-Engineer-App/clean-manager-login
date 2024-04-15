@@ -21,10 +21,7 @@ const BottomTab = () => {
           <Icon as={FaFileAlt} boxSize={6} />
           <Text fontSize="xs">견적관리</Text>
         </Box>
-        <Box onClick={() => navigate("/reservation-management")} textAlign="center">
-          <Icon as={FaCalendar} boxSize={6} />
-          <Text fontSize="xs">예약관리</Text>
-        </Box>
+
         <Box onClick={() => navigate("/chat")} textAlign="center">
           <Icon as={FaComments} boxSize={6} />
           <Text fontSize="xs">채팅</Text>
