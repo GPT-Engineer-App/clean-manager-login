@@ -29,7 +29,7 @@ const Index = () => {
         <Box mt={8} textAlign="center">
           <Text fontSize="sm">
             계정이 없으신가요?{" "}
-            <Link color="blue.500" href="#">
+            <Link color="blue.500" href="/signup">
               회원가입
             </Link>
           </Text>
