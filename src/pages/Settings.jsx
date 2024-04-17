@@ -12,7 +12,7 @@ const Settings = () => {
       <HStack mb={8}>
         <IconButton icon={<FaArrowLeft />} variant="ghost" onClick={() => navigate(-1)} />
         <Text fontSize="2xl" fontWeight="bold">
-          Settings
+          설정
         </Text>
       </HStack>
 
