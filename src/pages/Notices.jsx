@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import BackButton from "../components/BackButton";
 
 function Notices() {
-  return <div>Notices Page</div>;
+  return (
+    <div>
+      <BackButton />
+      Notices Page
+    </div>
+  );
 }
 
 export default Notices;

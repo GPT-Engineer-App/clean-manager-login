@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import BackButton from "../components/BackButton";
 
 function Notifications() {
-  return <div>Notifications Page</div>;
+  return (
+    <div>
+      <BackButton />
+      Notifications Page
+    </div>
+  );
 }
 
 export default Notifications;

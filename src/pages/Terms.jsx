@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import BackButton from "../components/BackButton";
 
 function Terms() {
-  return <div>Terms Page</div>;
+  return (
+    <div>
+      <BackButton />
+      Terms Page
+    </div>
+  );
 }
 
 export default Terms;

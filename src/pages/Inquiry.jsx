@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import BackButton from "../components/BackButton";
 
 function Inquiry() {
-  return <div>Inquiry Page</div>;
+  return (
+    <div>
+      <BackButton />
+      Inquiry Page
+    </div>
+  );
 }
 
 export default Inquiry;

@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import BackButton from "../components/BackButton";
 
 function Feedback() {
-  return <div>Feedback Page</div>;
+  return (
+    <div>
+      <BackButton />
+      Feedback Page
+    </div>
+  );
 }
 
 export default Feedback;
