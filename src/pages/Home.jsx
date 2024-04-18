@@ -19,7 +19,9 @@ const Home = () => {
       }
     };
 
-    fetchReservations();
+    const intervalId = setInterval(fetchReservations, 5000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleSubmitQuote = (reservationId) => {
