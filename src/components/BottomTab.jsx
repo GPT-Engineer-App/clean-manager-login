@@ -9,10 +9,6 @@ const BottomTab = () => {
   return (
     <Box position="fixed" bottom={0} left={0} right={0} bg="white" py={2} borderTopWidth={1}>
       <Flex justifyContent="space-around">
-        <Box onClick={() => navigate("/home")} textAlign="center">
-          <Icon as={FaHome} boxSize={6} />
-          <Text fontSize="xs">홈</Text>
-        </Box>
         <Box onClick={() => navigate("/my-schedule")} textAlign="center">
           <Icon as={FaCalendar} boxSize={6} />
           <Text fontSize="xs">내일정</Text>
