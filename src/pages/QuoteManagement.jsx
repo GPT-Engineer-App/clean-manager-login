@@ -42,17 +42,17 @@ const QuoteManagement = () => {
           </Button>
         </form>
         {submittedQuote && (
-          <Box mt={8}>
-            <Heading size="lg" mb={2}>
+          <Box mt={8} borderWidth={1} p={4} borderRadius="md">
+            <Heading size="lg" mb={4}>
               제출된 견적
             </Heading>
-            <Text>
+            <Text fontSize="md">
               <strong>고객명:</strong> {submittedQuote.customerName}
             </Text>
-            <Text>
+            <Text fontSize="md">
               <strong>고객 주소:</strong> {submittedQuote.customerAddress}
             </Text>
-            <Text>
+            <Text fontSize="md">
               <strong>견적 금액:</strong> {submittedQuote.quoteAmount}
             </Text>
           </Box>
