@@ -64,7 +64,7 @@ const SignUp = () => {
       formData.append("workArea", workArea);
       formData.append("profileImage", profileImage);
 
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/cleaners/signup`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/cleaners/signup`, {
         method: "POST",
         method: "POST",
         body: formData,

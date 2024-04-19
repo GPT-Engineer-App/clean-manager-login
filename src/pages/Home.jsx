@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/reservations/details`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/reservations/details`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
