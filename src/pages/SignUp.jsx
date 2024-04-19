@@ -66,6 +66,7 @@ const SignUp = () => {
 
       const response = await fetch(`${process.env.REACT_APP_API_URL}/cleaners/signup`, {
         method: "POST",
+        method: "POST",
         body: formData,
       });
       if (response.ok) {

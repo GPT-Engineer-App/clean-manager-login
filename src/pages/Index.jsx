@@ -10,6 +10,7 @@ const Index = () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
         method: "POST",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
