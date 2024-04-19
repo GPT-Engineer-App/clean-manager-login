@@ -9,6 +9,19 @@ const QuoteManagement = () => {
   const [quoteAmount, setQuoteAmount] = useState("");
   const [submittedQuote, setSubmittedQuote] = useState(null);
 
+  const handleEdit = (quote) => {
+    setCustomerName(quote.customerName);
+    setCustomerAddress(quote.customerAddress);
+    setQuoteAmount(quote.quoteAmount);
+  };
+
+  const handleCancel = () => {
+    setSubmittedQuote(null);
+    setCustomerName("");
+    setCustomerAddress("");
+    setQuoteAmount("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedQuote({ customerName, customerAddress, quoteAmount });

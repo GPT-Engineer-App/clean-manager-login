@@ -24,9 +24,9 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const handleSubmitQuote = (reservationId) => {
+  const handleSubmitQuote = (reservationId, quoteAmount) => {
     const reservation = reservations.find((res) => res.id === reservationId);
-    navigate("/submit-quote", { state: { reservation } });
+    navigate("/submit-quote", { state: { reservation, quoteAmount } });
   };
 
   return (
