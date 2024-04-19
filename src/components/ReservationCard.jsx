@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Text, Button, Input } from "@chakra-ui/react";
 
-const ReservationCard = ({ reservation, onSubmitQuote }) => {
+const ReservationCard = ({ reservation, onSubmitQuote, onPay }) => {
   const [quoteAmount, setQuoteAmount] = useState("");
 
   return (
@@ -18,6 +18,9 @@ const ReservationCard = ({ reservation, onSubmitQuote }) => {
       <Input placeholder="Enter quote amount" value={quoteAmount} onChange={(e) => setQuoteAmount(e.target.value)} type="number" mt={2} />
       <Button mt={2} onClick={() => onSubmitQuote(reservation.id, quoteAmount)}>
         Submit Quote
+      </Button>
+      <Button mt={2} onClick={() => onPay(reservation.id, quoteAmount)}>
+        Pay Now
       </Button>
     </Box>
   );

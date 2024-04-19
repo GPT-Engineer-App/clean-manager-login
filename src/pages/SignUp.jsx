@@ -47,28 +47,26 @@ const SignUp = () => {
     }
 
     try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("phone", phone);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("address", address);
+      formData.append("birthdate", birthdate);
+      formData.append("gender", gender);
+      formData.append("experience", experience);
+      formData.append("preference", preference);
+      formData.append("otherExperience", otherExperience);
+      formData.append("introduction", introduction);
+      formData.append("strengths", strengths);
+      formData.append("workHours", workHours);
+      formData.append("workArea", workArea);
+      formData.append("profileImage", profileImage);
+
       const response = await fetch(`${process.env.REACT_APP_API_URL}/cleaners/signup`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          password,
-          address,
-          birthdate,
-          gender,
-          experience,
-          preference,
-          otherExperience,
-          introduction,
-          strengths,
-          workHours,
-          workArea,
-          profileImage,
-        }),
+        body: formData,
       });
       if (response.ok) {
         toast({
