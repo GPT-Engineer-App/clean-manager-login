@@ -17,6 +17,7 @@ const Index = () => {
       });
       if (response.ok) {
         console.log("Login successful");
+        navigate("/home");
       } else {
         console.error("Login failed");
       }
