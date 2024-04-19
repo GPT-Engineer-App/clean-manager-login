@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, VStack, Icon, HStack, IconButton } from "@chakra-ui/react";
-import { FaArrowLeft, FaUser, FaBell, FaQuestionCircle, FaEnvelope, FaComment, FaFileAlt, FaLock, FaBellSlash } from "react-icons/fa";
+import { FaArrowLeft, FaUser, FaBell, FaQuestionCircle, FaEnvelope, FaComment, FaFileAlt, FaLock, FaBellSlash, FaSignOutAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import BottomTab from "../components/BottomTab";
 
@@ -48,6 +48,14 @@ const Settings = () => {
         <HStack onClick={() => navigate("/settings/notifications")}>
           <Icon as={FaBellSlash} boxSize={6} />
           <Text fontSize="xl">알림 설정</Text>
+        </HStack>
+        <HStack
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <Icon as={FaSignOutAlt} boxSize={6} />
+          <Text fontSize="xl">로그아웃</Text>
         </HStack>
       </VStack>
       <BottomTab />
