@@ -77,7 +77,6 @@ const SignUp = () => {
           isClosable: true,
         });
         navigate("/home");
-        navigate("/home");
       } else {
         throw new Error("회원가입에 실패했습니다");
       }
