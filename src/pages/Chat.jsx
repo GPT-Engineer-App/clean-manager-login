@@ -11,7 +11,7 @@ const Chat = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/customers`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/customers`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
