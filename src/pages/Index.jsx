@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Box, Heading, FormControl, FormLabel, Input, Button, Stack, Image, Text, Link } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
+        method: "POST",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
